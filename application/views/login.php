@@ -24,9 +24,9 @@
 		<div class="card-body login-card-body">
 		<p class="login-box-msg">Sign in to start your session</p>
 
-		<form action="#" method="post">
+		<form action="<?=site_url('auth/process')?>" method="post">
 			<div class="input-group mb-3">
-			<input type="email" class="form-control" name="Email" placeholder="Email">
+			<input type="text" class="form-control" name="username" placeholder="username" required>
 			<div class="input-group-append">
 				<div class="input-group-text">
 				<span class="fas fa-envelope"></span>
@@ -34,7 +34,7 @@
 			</div>
 			</div>
 			<div class="input-group mb-3">
-			<input type="password" class="form-control" name="Password" placeholder="Password">
+			<input type="password" class="form-control" name="password" placeholder="password" required>
 			<div class="input-group-append">
 				<div class="input-group-text">
 				<span class="fas fa-lock"></span>
@@ -46,7 +46,7 @@
 			</div>
 			<!-- /.col -->
 			<div class="col-4">
-				<button type="submit" class="btn btn-primary btn-block">Sign In</button>
+				<button type="submit" name="login" class="btn btn-primary btn-block">Sign In</button>
 			</div>
 			<!-- /.col -->
 			</div>
