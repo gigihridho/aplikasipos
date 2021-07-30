@@ -40,13 +40,13 @@
 	<li class="dropdown user user-menu mt-2">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			<img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="user-image">
-			<span class="hidden-xs">Admin</span>
+			<span class="hidden-xs"><?=$this->fungsi->user_login()->username ?></span>
 		</a>
 		<ul class="dropdown-menu">
 			<li class="user-header">
 				<img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle">
-				<p>Administrator
-					<small>Indonesia</small>
+				<p><?=$this->fungsi->user_login()->username ?>
+					<small><?=$this->fungsi->user_login()->address ?></small>
 				</p>
 			</li>
 			<li class="user-footer">
@@ -78,7 +78,7 @@
 			<img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
 			</div>
 			<div class="info">
-			<a href="#" class="d-block">Alexander Pierce</a>
+			<a href="#" class="d-block"><?=ucfirst($this->fungsi->user_login()->name) ?></a>
 			</div>
 		</div>
 
