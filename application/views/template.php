@@ -205,6 +205,7 @@
 				</li>
 				</ul>
 			</li>
+			<?php if($this->session->userdata('level') == 1) { ?>
 			<li class="nav-header">Settings</li>
 			<li class="nav-item">
 				<a href="https://adminlte.io/docs/3.1/" class="nav-link">
@@ -212,6 +213,7 @@
 				<p>User</p>
 				</a>
 			</li>
+			<?php } ?>
 			</ul>
 		</nav>
 		<!-- /.sidebar-menu -->
