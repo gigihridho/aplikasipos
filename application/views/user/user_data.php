@@ -21,7 +21,7 @@
 		<div class="card">
 			<div class="card-header">
 				<h3 class="box-title">Data Users</h3>
-				<div class="pull-right">
+				<div class="float-right">
 					<a href="<?=site_url('user/add')?>" class="btn btn-primary btn-flat">
 						<i class="fa fa-user-plus"></i> Create Users
 					</a>
