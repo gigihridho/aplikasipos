@@ -30,35 +30,41 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-4 offset-md-4">
-						<?php echo validation_errors(); ?>
+						<?php //echo validation_errors() ?>
 						<form action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
+							<div class="form-group <?=form_error('fullname') ? 'is-invalid' : null?>">
 								<label for="name">Name *</label>
-								<input type="text" name="fullname" value="<?=set_value('fullname')?>" class="form-control">
+								<input type="text" name="fullname" value="<?=set_value('fullname')?>"  class="form-control <?= form_error('fullname') ? 'is-invalid' : null ?>">
+								<?= form_error('fullname') ?>
 							</div>
-							<div class="form-group">
+							<div class="form-group <?=form_error('username') ? 'is-invalid' : null?>">
 								<label for="name">Username *</label>
-								<input type="text" name="username" class="form-control">
+								<input type="text" name="username" value="<?=set_value('username')?>" class="form-control <?= form_error('fullname') ? 'is-invalid' : null ?>">
+								<?= form_error('username') ?>
 							</div>
-							<div class="form-group">
+							<div class="form-group <?=form_error('password') ? 'is-invalid' : null?>">
 								<label for="name">Password *</label>
-								<input type="password" name="password" class="form-control">
+								<input type="password" name="password" value="<?=set_value('password')?>" class="form-control <?= form_error('fullname') ? 'is-invalid' : null ?>">
+								<?= form_error('password') ?>
 							</div>
-							<div class="form-group">
+							<div class="form-group <?=form_error('passconf') ? 'is-invalid' : null?>">
 								<label for="name">Password Confirmation *</label>
-								<input type="password" name="passconf" class="form-control">
+								<input type="password" name="passconf" value="<?=set_value('passconf')?>" class="form-control <?= form_error('fullname') ? 'is-invalid' : null ?>">
+								<?= form_error('passconf') ?>
 							</div>
 							<div class="form-group">
 								<label for="name">Address</label>
-								<textarea type="text" name="address" class="form-control"></textarea>
+								<textarea type="text" name="address" value="<?=set_value('address')?>" class="form-control"></textarea>
+								<?= form_error('address') ?>
 							</div>
-							<div class="form-group">
+							<div class="form-group <?=form_error('level') ? 'is-invalid' : null?>">
 								<label for="name">Level *</label>
-								<select name="level" id="" class="form-control">
+								<select name="level" id="" class="form-control <?= form_error('fullname') ? 'is-invalid' : null ?>">
 									<option value="">Pilih</option>
-									<option value="1">Admin</option>
-									<option value="2">Kasir</option>
+									<option value="1" value="<?=set_value('level') == 1 ? "selected" : null?>">Admin</option>
+									<option value="2" value="<?=set_value('level') == 2 ? "selected" : null?>">Kasir</option>
 								</select>
+								<?= form_error('level') ?>
 							</div>
 							<div class="form-group">
 								<button class="btn btn-success btn-flat" type="submit">
