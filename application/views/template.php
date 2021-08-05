@@ -205,7 +205,7 @@
 				</li>
 				</ul>
 			</li>
-			<?php if($this->session->userdata('level') == 1) { ?>
+			<?php if($this->fungsi->user_login()->level == 1) { ?>
 			<li class="nav-header">Settings</li>
 			<li class="nav-item">
 				<a href="<?=site_url('user')?>" class="nav-link">
